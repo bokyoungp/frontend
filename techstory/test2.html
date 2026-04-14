@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>팀 버너스리 소개</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: linen;
+      color: green;
+      font-family: Arial, sans-serif;
+      line-height: 1.8;
+    }
+
+    .container {
+      width: 80%;
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 30px;
+      background-color: rgba(255, 255, 255, 0.7);
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .intro {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+
+    .intro p {
+      margin: 8px 0;
+    }
+
+    .btn-wrap {
+      text-align: center;
+      margin: 25px 0;
+    }
+
+    button {
+      background-color: green;
+      color: linen;
+      border: none;
+      padding: 12px 24px;
+      font-size: 16px;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      opacity: 0.85;
+    }
+
+    .image-box {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    #timPhoto {
+      display: none;
+      width: 320px;
+      max-width: 100%;
+      border-radius: 14px;
+      border: 3px solid green;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .source {
+      margin-top: 24px;
+      font-size: 14px;
+      text-align: center;
+    }
+
+    .source a {
+      color: green;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>팀 버너스리(Tim Berners-Lee)</h1>
+
+    <div class="intro">
+      <p>1. 팀 버너스리는 월드 와이드 웹(World Wide Web)의 창시자로 널리 알려진 영국의 컴퓨터 과학자이다.</p>
+      <p>2. 그는 1955년 영국 런던에서 태어났다.</p>
+      <p>3. 옥스퍼드 대학교에서 공부한 뒤 소프트웨어와 정보 기술 분야에서 활동했다.</p>
+      <p>4. 1989년 CERN에서 정보 공유를 더 쉽게 하기 위한 아이디어를 제안했다.</p>
+      <p>5. 이 제안은 오늘날 웹의 시작이 된 중요한 문서로 평가된다.</p>
+      <p>6. 그는 1990년에 최초의 웹 서버와 웹 브라우저를 직접 개발했다.</p>
+      <p>7. 또한 HTML, HTTP, URI 같은 핵심 웹 기술의 기반을 마련했다.</p>
+      <p>8. 1994년에는 웹 표준을 발전시키기 위해 W3C를 설립했다.</p>
+      <p>9. 그의 노력 덕분에 웹은 전 세계인이 함께 사용하는 열린 기술로 성장했다.</p>
+      <p>10. 오늘날 그는 개방형 웹, 데이터 주권, 더 나은 인터넷의 미래를 위해 계속 활동하고 있다.</p>
+    </div>
+
+    <div class="btn-wrap">
+      <button id="toggleBtn">사진 보이기 / 숨기기</button>
+    </div>
+
+    <div class="image-box">
+      <img
+        id="timPhoto"
+        src="https://www.w3.org/Press/Stock/Berners-Lee/TimBL-bw-big-72-bright.jpeg"
+        alt="팀 버너스리 사진"
+      />
+    </div>
+
+    <div class="source">
+      사진 출처:
+      <a href="https://www.w3.org/Press/Stock/Berners-Lee/" target="_blank">
+        W3C Stock Photos of Tim Berners-Lee
+      </a>
+    </div>
+  </div>
+
+  <script>
+    const toggleBtn = document.getElementById("toggleBtn");
+    const timPhoto = document.getElementById("timPhoto");
+
+    toggleBtn.addEventListener("click", function () {
+      if (timPhoto.style.display === "none" || timPhoto.style.display === "") {
+        timPhoto.style.display = "block";
+      } else {
+        timPhoto.style.display = "none";
+      }
+    });
+  </script>
+</body>
+</html>
