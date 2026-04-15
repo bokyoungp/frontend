@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- post, get, put, patch, delete  
+       post / get -->
+    <form action="loginprocess.html" method="get">
+      <input type="radio" name="city" value="1" checked>서울
+      <input type="radio" name="city" value="2">울산
+      <input type="radio" name="city" value="3">남양주
+      <!-- http://127.0.0.1:5500/techstory/loginprocess.html?city=1 -->
+      <!-- http://127.0.0.1:5500/techstory/loginprocess.html?city=2 -->
+      <!-- http://127.0.0.1:5500/techstory/loginprocess.html?city=3 -->
+       <br>
+
+      <input type="checkbox" name="berry" value="1" checked>딸기
+      <input type="checkbox" name="watermelon" value="2">수박
+      <input type="checkbox" name="apple" value="3">사과
+<!-- http://127.0.0.1:5500/techstory/loginprocess.html?berry=1&watermelon=2 -->
+ <!-- http://127.0.0.1:5500/techstory/loginprocess.html?berry=1&watermelon=2&apple=3 -->
+      <br>     
+      <select name="fruit">
+        <option value="1">바나나</option>
+        <option value="2" selected>딸기</option>
+        <option value="3">사과</option>
+      </select>
+      <!-- http://127.0.0.1:5500/techstory/loginprocess.html?fruit=3 -->
+      <input type="submit">
+    </form>
+    
+  </body>
+</html>
