@@ -1,0 +1,75 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: linen;
+  color: green;
+  font-family: Arial, sans-serif;
+  line-height: 1.8;
+}
+
+.container {
+  width: 80%;
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.intro {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.intro p {
+  margin: 8px 0;
+}
+
+.btn-wrap {
+  text-align: center;
+  margin: 25px 0;
+}
+
+button {
+  background-color: green;
+  color: linen;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.85;
+}
+
+.image-box {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#timPhoto {
+  display: none;
+  width: 320px;
+  max-width: 100%;
+  border-radius: 14px;
+  border: 3px solid green;
+  box-shadow: 0 4px 10px rgba(180, 120, 120, 0.2);
+}
+
+.source {
+  margin-top: 24px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.source a {
+  color: green;
+}
