@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/fuction_out_over.js">
+    </script>
+</head>
+<body>
+    <h3>마우스를 올리면 사진이 변합니다.</h3>
+    <hr>
+    <!-- <img src="image/card_back.png" alt="카드"
+    onmouseover="this.src='image/card_front.png'"
+    onmouseout="this.src='image/card_back.png'"
+    width="200px" height="300px"> -->
+    <img id="card" src="image/card_back.png" alt="카드"
+    onmouseover="over(this)"
+    onmouseout="out(this)"
+    width="200px" height="300px">
+</body>
+</html>
