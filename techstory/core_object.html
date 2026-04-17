@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // ArrayList
+      let cities = ["Seoul", "Tokyo", "London"];
+      console.log(cities[0]);
+      console.log(cities[2]);
+      cities[3] = "Paris";
+      console.log(cities[3]);
+      cities[4] = function () {};
+      console.log(cities[4]);
+
+      let city = new Array(3);
+      console.log(city.length);
+
+      city.length = 10;
+
+      console.log(city[4]);
+      city[4] = "abc";
+      console.log(city[4]);
+
+      city.length = 2;
+
+      for (let index = 0; index < city.length; index++) {
+        console.log(city[index]);
+      }
+      console.log(city);
+
+      let now = new Date();
+      let date = now.getDate();
+      let month = now.getMonth() + 1;
+      let hour = now.getHours();
+      console.log(now, month, date, hour, now.toLocaleString());
+
+// 실습 - 접속 시간을 가져와서 방문한 초시간이 짝수이면 violet 색으로,
+// 방문한 초시간이 홀수이면 lightskyblue 색으로 body의 배경색을 변경하시오.
+      let seconds = now.getSeconds();
+      if(seconds % 2 == 0) {
+        document.body.style.backgroundColor = "violet";
+      } else {
+        document.body.style.backgroundColor = "lightskyblue";
+      }
+
+      // String 객체 - 불변객체, length 를 변경할 수 없음
+      let str = "hello";
+      str = str + ", java";
+      console.log(str.length);
+      str.length = 300;
+      console.log(str.length);
+      // Math 객체
+      console.log(Math.PI);
+      console.log(Math.floor(Math.random()*10));
+    </script>
+  </body>
+</html>
