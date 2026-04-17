@@ -1,18 +1,55 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <!-- 일단 출력을 console 창에 출력해보고, document.write() 를 이용해 화면에 출력하기 -->
     <!-- 사용자로부터 숫자를 1개 입력받아서 입력받은 수와 10 을 더한 결과를 출력하기  -->
-    
-
+    <!-- 자바 스크립트에서의 임시적 형변환 이해하기 , 덧셈에서는 Concatenation이 우선 순위 규칙이 적용됨 -->
+    <!-- <script>
+      let number = prompt("숫자를 입력하세요");
+      number = parseInt(number);
+      let result = number + 10;
+      console.log(
+        "입력받은 숫자 " + number + "에 10을 더한 결과는 " + result + "입니다.",
+      );
+      document.write("<h3>숫자 입력받아 처리하기</h3><hr>");
+      document.write(
+        "<p>입력받은 숫자 " +
+          number +
+          "에 10을 더한 결과는 " +
+          result +
+          "입니다.</p>",
+      );
+    </script> -->
 
     <!-- 2 ~ 9 까지의 숫자 중 하나를 입력받아서 구구단 출력하기 -->
-
-
-</body>
+    <!-- 자바 스크립트에서의 임시적 형변환 이해하기 , 곱셈(*,-,/)에서는 숫자 우선 순위 규칙이 적용됨 -->
+    <script>
+      let number = prompt(
+        "구구단을 출력할 숫자를 입력하세요. (2 ~ 9 까지의 숫자만 입력)",
+      );
+      if (number == 1) {
+        // 비교, 동등 연산자 => 자동 형변환이 일어남 "1" == 1 (true)
+        console.log("1을 입력했습니다.");
+      }
+      number = parseInt(number);
+      if (number === 1) {
+        // 일치 연산자 => 형변환이 일어나지 않음, "1" === 1 (false)
+        console.log(
+          "문자 1과 숫자1은 다릅니다. 그래서 형변환해서 지금은 동일합니다.",
+        );
+      }
+      if (number >= 2 && number <= 9) {
+        console.log(number + "X" + 1 + "=" + number * 1);
+        console.log(number + "X" + 2 + "=" + number * 2);
+        document.write("<h3>숫자 입력받아 처리하기</h3><hr>");
+        document.write(`${number} X 1 = ${number * 1}<br>`);
+        document.write(`${number} X 2 = ${number * 2}<br>`);
+      }
+    </script>
+  </body>
 </html>
