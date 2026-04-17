@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 3000번 DOM 이 수정되는 과정, 4500ms 소요
+        function onClick() {
+            const ul = document.getElementById("list");
+            for (let i = 0; i < 3000; i++) {
+                ul.innerHTML += `<li>${i+1}</li>`;       
+            }
+        }
+        // list 문자열을 30000번 수정한 후 DOM 은 한번만 수정함. 250ms 가 소요됨.
+        function onClick1() {
+            const ul = document.getElementById("list");
+            let list ="";
+            for (let i = 0; i < 3000; i++) {
+                list += `<li>${i+1}</li>`;       
+            }
+            ul.innerHTML = list;
+        }
+
+    </script>
+</head>
+<body>
+    <h3>Dom 트리 수정과정</h3>
+    <hr>
+    <button onclick="onClick1()">리스트 추가하기</button>
+    <ul id="list"></ul>
+</body>
+</html>
