@@ -15,16 +15,16 @@
       // console.log(num);
       // num = 0;
       var number; // undefined 가 초기화됨
-      let str = "내 이름은 '홍길동'입니다."
-      let str2 = "내 이름은 \"홍길동\"입니다."
-      let str3 = "123" ;
+      let str = "내 이름은 '홍길동'입니다.";
+      let str2 = '내 이름은 "홍길동"입니다.';
+      let str3 = "123";
       let num = parseInt(str3) + 1;
-      let res = num / 33 ;
+      let res = num / 33;
       let res2 = 3 % 2;
       let res3 = 23 + 35 + "abc";
       let res4 = "abc" + 23 + 35;
       let name = "홍길동";
-      if(name <= "홍길순") {
+      if (name <= "홍길순") {
         console.log("홍길동입니다.");
       }
       console.log(str, str2, str3, num, res, res2, res3, res4);
@@ -36,8 +36,8 @@
       }
 
       // let/const 호이스팅 테스트
-    //   console.log(number2);
-      let number2 = 10 ; // 초기화 X
+      //   console.log(number2);
+      let number2 = 10; // 초기화 X => 초기화 O
       console.log(number2);
     </script>
   </body>
