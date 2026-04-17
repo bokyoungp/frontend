@@ -27,6 +27,11 @@ let student = {
     age : 20,
     score : 100
 }
+let student2 = {
+    name : "손흥민",
+    age : 30,
+    score : 100
+}
 for (const key in student) {   
     const element = student[key];
     console.log(element);
