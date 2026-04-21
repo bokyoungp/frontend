@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- post, get, put, patch, delete  
+       post / get -->
+    <form action="loginprocess.html" method="get" name="select">
+      <input type="radio" name="fruits" value="1">바나나
+      <input type="radio" name="fruits" value="2">망고
+      <input type="radio" name="fruits" value="3">사과
+      <img id="img" src="" alt="" width="100px" height="120px">
+
+      <br>
+
+      <input type="checkbox" name="berry" value="1" checked>딸기
+      <input type="checkbox" name="watermelon" value="2">수박
+      <input type="checkbox" name="apple" value="3">사과
+<!-- http://127.0.0.1:5500/techstory/loginprocess.html?berry=1&watermelon=2 -->
+ <!-- http://127.0.0.1:5500/techstory/loginprocess.html?berry=1&watermelon=2&apple=3 -->
+      <br>     
+      <select name="fruit">
+        <option value="1">바나나</option>
+        <option value="2" selected>딸기</option>
+        <option value="3">사과</option>
+      </select>
+      <!-- http://127.0.0.1:5500/techstory/loginprocess.html?fruit=3 -->
+      <input type="submit">
+    </form>
+    <script>
+      let fruits = document.forms["select"].elements["fruits"];
+      console.log(fruits);
+      // img.src = "./image/banana.jpg";
+      // 이벤트 리스너 등록은 선택되어 있지 않아도 모든 fruit 요소에 먼저 등록해놓음
+      for (const fruit of fruits) {
+        let img = document.getElementById("img");
+          fruit.addEventListener("change", () => {
+            if(fruit.value == "1") {
+              img.src = "./image/banana.jpg";
+            } else if(fruit.value == "2") {
+              img.src = "./image/mango.jpg";
+            } else if(fruit.value == "3") {
+              img.src = "./image/apple.jpg";
+            }
+          })
+      }
+    </script>
+  </body>
+</html>
