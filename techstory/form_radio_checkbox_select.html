@@ -16,28 +16,32 @@
 
       <br>
 
-      <input type="checkbox" name="berry" value="1" checked>딸기
-      <input type="checkbox" name="watermelon" value="2">수박
-      <input type="checkbox" name="apple" value="3">사과
+      <input type="checkbox" name="berry" value="7000" checked onclick="calc()">딸기
+      <input type="checkbox" name="watermelon" value="27000">수박
+      <input type="checkbox" name="apple" value="15000">사과
+      <input id="price" type="text" value="0">
 <!-- http://127.0.0.1:5500/techstory/loginprocess.html?berry=1&watermelon=2 -->
  <!-- http://127.0.0.1:5500/techstory/loginprocess.html?berry=1&watermelon=2&apple=3 -->
       <br>     
-      <select name="fruit">
-        <option value="1">바나나</option>
-        <option value="2" selected>딸기</option>
-        <option value="3">사과</option>
+      <select name="fruit" onchange="drawImage()">
+        <option value="./image/banana.jpg">바나나</option>
+        <option value="./image/mango.jpg" selected>망고</option>
+        <option value="./image/apple.jpg">사과</option>
       </select>
+      <img id="img2" src="./image/mango.jpg" alt="" width="100px" height="120px">
       <!-- http://127.0.0.1:5500/techstory/loginprocess.html?fruit=3 -->
       <input type="submit">
     </form>
     <script>
       let fruits = document.forms["select"].elements["fruits"];
-      console.log(fruits);
+      let selectFruits = document.forms["select"].elements["fruit"];
+      selectFruits.options[selectFruits.selectedIndex].value;
+      console.log(selectFruits.selectedIndex);
       // img.src = "./image/banana.jpg";
       // 이벤트 리스너 등록은 선택되어 있지 않아도 모든 fruit 요소에 먼저 등록해놓음
       for (const fruit of fruits) {
         let img = document.getElementById("img");
-          fruit.addEventListener("change", () => {
+          fruit.addEventListener("click", () => {
             if(fruit.value == "1") {
               img.src = "./image/banana.jpg";
             } else if(fruit.value == "2") {
@@ -47,6 +51,19 @@
             }
           })
       }
+
+      function drawImage() {
+        let img2 = document.getElementById("img2");
+        img2.src = selectFruits.options[selectFruits.selectedIndex].value;
+      }
+
+      //selectFruits.addEventListener("change", drawImage);
+
+      function calc() {
+        let price = document.getElementById("price");
+        price.value = "7000";
+      }
+      
     </script>
   </body>
 </html>
